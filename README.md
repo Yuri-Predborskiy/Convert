@@ -1,42 +1,38 @@
 # Convert
-Test task for converting archived CSV documents using node.js
+Test task for converting archived CSV documents using node.js. You can use Convert either as a module, or from command line.
 
+## Script, executed from command line
+To execute Convert from command line, with targeted file `data.zip`, do the following:
 
-To install required modules, execute npm install command
-```
-npm install
-```
+1. Clone or download this repository
 
-To convert one archive using command line, use convert-cmd.js
+2. Install dependencies with `npm install` commmand
+
+3. Put required archive file into the project folder and execute the following command:
 ```
 node convert-cmd.js data.zip
 ```
 
-This will convert `data.zip` contents into JSON, resulting file will be named `data.json`
+## Module
+To use Convert as a module in another javascript file, install npm dependencies for the project:
+* d3-dsv
+* jsonfile
+* jszip
 
-To use Convert as a module in another javascript file, simply require it
+In order to convert a file, require convert.js and launch it with file name as a parameter:
 ```
 var convert = require('./convert.js');
-```
-
-In order to use Convert as a module, make sure you have the following NPM modules installed in your project:
-d3-dsv
-jsonfile
-jszip
-
-Then, call convert with a file name as the only parameter
-```
+...
 convert("data.zip");
 ```
+This will create `data.json` in the project folder. Resulting `.json` file has the same name as `.zip` archive. If such file already exists, convert will try to overwrite it. If file does not exist, file system exception will be thrown.
 
-This will convert archived CSV files in `data.zip` file, output file will be named `data.json`.
-
-Expected input file formatting:
+## Expected input file format
 ```
 "first_name"||"last_name"||"user"||"email"||"name"||"phone"||"cc"||"amount"||"date"
 ```
 
-Output file format:
+## Resulting file format
 ```
 {
   "name": "string", // <last_name> + <first_name>
