@@ -19,13 +19,13 @@ To use Convert as a module in another javascript file, install npm dependencies 
 * jsonfile
 * jszip
 
-In order to convert a file, require convert.js and launch it with file name as a parameter:
+In order to convert `data.zip` file, require `convert.js` and launch it with file name as a parameter:
 ```
 var convert = require('./convert.js');
 ...
 convert("data.zip");
 ```
-This will create `data.json` in the project folder. Resulting `.json` file has the same name as `.zip` archive. If such file already exists, convert will try to overwrite it. If file does not exist, file system exception will be thrown.
+This will create `data.json` in the project folder. Resulting `.json` file has the same name as `.zip` archive. If such file already exists, convert will try to overwrite it. If `data.zip` file does not exist, or it cannot be accessed, file system exception will be thrown.
 
 ## Expected input file format
 ```
