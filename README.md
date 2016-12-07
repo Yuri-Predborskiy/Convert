@@ -1,10 +1,28 @@
 # Convert
 Test task for converting archived CSV documents using node.js
 
-To start using Convert, simply require it
+
+To install required modules, execute npm install command
+```
+npm install
+```
+
+To convert one archive using command line, use convert-cmd.js
+```
+node convert-cmd.js data.zip
+```
+
+This will convert `data.zip` contents into JSON, resulting file will be named `data.json`
+
+To use Convert as a module in another javascript file, simply require it
 ```
 var convert = require('./convert.js');
 ```
+
+In order to use Convert as a module, make sure you have the following NPM modules installed in your project:
+d3-dsv
+jsonfile
+jszip
 
 Then, call convert with a file name as the only parameter
 ```
