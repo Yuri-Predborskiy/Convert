@@ -1,11 +1,17 @@
 # Convert
 Test task for converting archived CSV documents using node.js
 
-You can launch converting from command line using the following command
+To start using Convert, simply require it
 ```
-node convert.js docs.zip
+var convert = require('./convert.js');
 ```
-This will convert archived files in `docs.zip` file, output file will be named `docs.json`.
+
+Then, call convert with a file name as the only parameter
+```
+convert("data.zip");
+```
+
+This will convert archived CSV files in `data.zip` file, output file will be named `data.json`.
 
 Expected input file formatting:
 ```
