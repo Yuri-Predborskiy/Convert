@@ -1,0 +1,14 @@
+{
+  "name": "convert",
+  "description": "Converting archived CSV files into JSON",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "d3-dsv": "^1.0.3",
+    "jsonfile": "^2.4.0",
+    "jszip": "^3.1.3"
+  }
+}
