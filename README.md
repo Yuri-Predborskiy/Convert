@@ -32,7 +32,7 @@ This will create `data.json` in the project folder. Resulting `.json` file has t
 "first_name"||"last_name"||"user"||"email"||"name"||"phone"||"cc"||"amount"||"date"
 ```
 
-## Resulting file format
+## Resulting JSON file format
 ```
 {
   "name": "string", // <last_name> + <first_name>
